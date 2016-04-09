@@ -9,7 +9,7 @@ package calculator
 
 import (
 	"fmt"
-	"stack"
+	"github.com/csos95/Go-Packages/stack"
 	"strconv"
 	"strings"
 )
