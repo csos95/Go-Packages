@@ -2,7 +2,7 @@ package main
 
 import (
 	"bufio"
-	"calculator"
+	"github.com/csos95/Go-Packages/calculator"
 	"fmt"
 	"os"
 )
