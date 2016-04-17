@@ -2,6 +2,7 @@ package kdtree
 
 import (
 	"fmt"
+	"strings"
 )
 
 type kdnode struct {
@@ -71,8 +72,11 @@ func (k *KDTree) insert(subroot, newnode *kdnode) {
 	}
 }
 
-func (k *KDTree) Traverse(style string) string {
-	return k.traverse(k.root, style)
+func (k *KDTree) Traverse(style string) []string {
+	var tree = k.traverse(k.root, style)
+	return strings.FieldsFunc(tree, func(r rune) bool {
+		return r == ' ' || r == '\n'
+	})
 }
 
 func (k *KDTree) traverse(subroot *kdnode, style string) string {
