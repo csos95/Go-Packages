@@ -1,0 +1,9 @@
+language: go
+
+go:
+  - tip
+
+env:
+  - TEST_DIR=stack
+  - TEST_DIR=kdtree
+script: cd $TEST_DIR && go test
